@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#canvas, body{
+    background-image: url("./img/background.png");
+    background-size: 5%;
+    background-position: top;
+    animation: 20s linear movimientoFondo infinite;
+}
+
+@keyframes movimientoFondo {
+    from{
+        background-position: bottom;
+    }
+    to{
+        background-position: top;
+    }
+}
+
+

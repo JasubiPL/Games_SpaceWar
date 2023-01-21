@@ -1,0 +1,37 @@
+// Create an empty array to store the enemy objects
+let enemies = [];
+
+// Function to generate a random enemy
+function generateEnemy() {
+    // Generate random x and y coordinates for the enemy
+    let x = Math.random() * canvas.width;
+    let y = Math.random() * canvas.height;
+    
+    // Create an object to represent the enemy
+    let enemy = {
+        x: x,
+        y: y,
+        width: 50,
+        height: 50,
+    };
+    
+    // Add the enemy to the array
+    enemies.push(enemy);
+}
+
+// Generate a set number of enemies at the start of the game
+for (let i = 0; i < 5; i++) {
+    generateEnemy();
+}
+
+// Draw the enemies on the canvas
+function drawEnemies() {
+    for (let i = 0; i < enemies.length; i++) {
+        let enemy = enemies[i];
+        // Draw the enemy on the canvas using the x, y, width, and height properties
+        ctx.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
+    }
+}
+
+// Call the drawEnemies function to display the enemies on the canvas
+drawEnemies();
