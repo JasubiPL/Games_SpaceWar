@@ -15,12 +15,53 @@ body{
     animation: 20s linear movimientoFondo infinite;
 }
 
+.control_del_player{
+    /* background-color: red; */
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    background-color: transparent;
+    border: 5px solid #fff;
+    color: #fff;
+    font-size: 40px;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    margin-left: 15px;
+    opacity: .3;
+}
+#fire{
+    margin-right: 15px;
+}
+#fire img{
+    width: 55px;
+    transform: translateX(5px);
+    transform: translateY(5px);
+
+}
+
+button:active{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
 @keyframes movimientoFondo {
     from{
-        background-position: bottom;
+        background-position: top;
     }
     to{
-        background-position: top;
+        background-position: bottom ;
     }
 }
 

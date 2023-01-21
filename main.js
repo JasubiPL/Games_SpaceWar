@@ -1,5 +1,9 @@
 window.onkeydown = teclaPrecionada;
 //Elementos------------------------------------------------------------------
+const btnA = document.getElementById("btn_a");
+const hola = document.getElementById("hola");
+const btnD = document.getElementById("btn_d");
+const btnFire = document.getElementById("fire");
 var canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 const player = new Image();
@@ -18,6 +22,7 @@ const teclaDerecha = 39;
 let posicionPlayerX = (canvas.width / 2) - 48;
 let posicionPlayerY = canvas.height - 96;
 let numMisil = true;
+let movimientoDerecho = false;
 
 
 
@@ -33,8 +38,7 @@ function render(){
     
 }
 
-//Movimiento de Players-------------------------------------------------------
-        
+//Movimiento de Players-------------------------------------------------------     
 
 function teclaPrecionada(e){
     if(e.keyCode === teclaA || e.keyCode === teclaIzquierda){
@@ -87,3 +91,21 @@ function disparo(){
         
 }
 
+
+function controlJugador(boton){
+    if(boton === "a"){
+        //alert("izquierda");
+        posicionPlayerX -= 10
+        movimientoDerecho = true;
+        detenerMovimientos();
+    }
+    else if(boton === "d"){
+        //alert("derecha");
+        posicionPlayerX += 10
+        detenerMovimientos();
+    }
+    else if(boton === "fire"){
+        //alert("Disparo");
+        disparo();
+    }
+}

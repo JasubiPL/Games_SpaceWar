@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space War V1.0.0</title>
+    <title>Space War V1.0.2</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     
     <canvas id="canvas" width="1024px" height="600px"></canvas>
 
+    <div class="control_del_player">
+        <div id="btn_movimiento">
+            <button id="btn_a" onclick="controlJugador('a')">A</button>
+            <button id="btn_d" onclick="controlJugador('d')">D</button>
+        </div>
+        <button id="fire" onmousedown="controlJugador('fire')"><img src="./img/misil-grande.png"></button>
+    </div>
     <script src="./main.js"></script>
 </body>
 </html>
